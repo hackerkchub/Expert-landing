@@ -15,7 +15,7 @@ export const metadata = {
     shortcut: "/logo-192.png",
     apple: "/logo-192.png",
   },
-  
+
   keywords: [
     "g9expert",
     "expert registration india",
@@ -36,28 +36,29 @@ export const metadata = {
     follow: true,
   },
   openGraph: {
-    title: "G9Expert - Earn by Selling Your Expertise",
-    description:
-      "Become an expert on G9Expert. Sell your services, set your price, and earn through chat and call.",
-    url: siteUrl,
-    siteName: "G9Expert",
-    type: "website",
-    images: [
-      {
-        url: `${siteUrl}/opengraph-image`,
-        width: 1200,
-        height: 630,
-        alt: "G9Expert expert registration",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "G9Expert Expert Registration",
-    description:
-      "Start earning by selling your services online. Join G9Expert today.",
-    images: [`${siteUrl}/opengraph-image`],
-  },
+  title: "G9Expert - Earn by Selling Your Expertise",
+  description:
+    "Become an expert on G9Expert. Sell your services, set your price, and earn through chat and call.",
+  url: siteUrl,
+  siteName: "G9Expert",
+  type: "website",
+  images: [
+    {
+      url: `${siteUrl}/og-image.jpg`,
+      width: 1200,
+      height: 630,
+      alt: "G9Expert expert registration",
+    },
+  ],
+},
+
+twitter: {
+  card: "summary_large_image",
+  title: "G9Expert Expert Registration",
+  description:
+    "Start earning by selling your services online. Join G9Expert today.",
+  images: [`${siteUrl}/og-image.jpg`],
+},
 };
 
 const organizationSchema = {

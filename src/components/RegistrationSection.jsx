@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { getHeadingAnimation } from "../lib/headingAnimation";
 import { registrationPlanTranslations } from "../lib/translations";
+import axios from "axios";
 
 const initialForm = {
   fullName: "",
@@ -42,19 +43,61 @@ export default function RegistrationSection() {
   const { lang, t } = useLanguage();
   const planText = registrationPlanTranslations[lang] ?? registrationPlanTranslations.en;
   const [form, setForm] = useState(initialForm);
-  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
+  // Auto clear messages after 5 seconds
+  useEffect(() => {
+    if (successMessage || error) {
+      const timer = setTimeout(() => {
+        setSuccessMessage("");
+        setError("");
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage, error]);
 
   function handleChange(event) {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Form Data:", form);
-    setSubmitted(true);
-    setForm(initialForm);
-  }
+
+    try {
+      setLoading(true);
+      setError("");
+      setSuccessMessage("");
+
+      const response = await axios.post(
+        `http://localhost:5000/api/expert-detail/expert-registration`,
+        form,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.data.success) {
+        setSuccessMessage(response.data.message);
+        setForm(initialForm);
+        
+        // REMOVED - No auto-scroll to top
+        // Success message will show right where it is
+      }
+    } catch (error) {
+      setError(
+        error?.response?.data?.message ||
+        "Something went wrong. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const planMessage =
     form.plan === "4999"
@@ -138,11 +181,26 @@ export default function RegistrationSection() {
               rows="5"
               required
             />
-            <button className="button button-primary button-block" type="submit">
-              {t.registration.submit}
+            <button
+              className="button button-primary button-block"
+              type="submit"
+              disabled={loading}
+            >
+              {loading ? "Submitting..." : t.registration.submit}
             </button>
             <p className="fine-print">{t.registration.note}</p>
-            {submitted ? <p className="success-message">{t.registration.success}</p> : null}
+
+            {error && (
+              <p className="error-message">
+                {error}
+              </p>
+            )}
+
+            {successMessage && (
+              <p className="success-message">
+                {successMessage}
+              </p>
+            )}
           </form>
         </div>
         <aside className="support-stack">
@@ -172,6 +230,75 @@ export default function RegistrationSection() {
           </article>
         </aside>
       </div>
+
+      <style jsx>{`
+        .error-message {
+          background: #fee2e2;
+          color: #dc2626;
+          padding: 12px;
+          border-radius: 8px;
+          margin-top: 16px;
+          font-size: 14px;
+          text-align: center;
+          animation: slideIn 0.3s ease;
+        }
+
+        .success-message {
+          background: #d1fae5;
+          color: #065f46;
+          padding: 12px;
+          border-radius: 8px;
+          margin-top: 16px;
+          font-size: 14px;
+          text-align: center;
+          animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .form-group {
+          margin-bottom: 16px;
+        }
+
+        .form-label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: 500;
+          color: #1e293b;
+        }
+
+        .plan-selection-note {
+          background: #f0f9ff;
+          color: #0369a1;
+          padding: 8px 12px;
+          border-radius: 8px;
+          font-size: 13px;
+          margin-top: -8px;
+          margin-bottom: 16px;
+          border-left: 3px solid #0ea5e9;
+        }
+
+        .fine-print {
+          font-size: 12px;
+          color: #64748b;
+          text-align: center;
+          margin-top: 12px;
+        }
+
+        button:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      `}</style>
     </section>
   );
 }

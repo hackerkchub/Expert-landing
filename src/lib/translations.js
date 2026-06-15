@@ -142,26 +142,37 @@ export const translations = {
       ],
     },
     ctaBanner: {
-      eyebrow: "Limited Launch Offer",
-      title: "Why Wait Any Longer?",
-      text: "Join today and start earning from your expertise.",
-      items: [
-        "0% commission for the first 50 experts (30 days)",
-        "Free profile promotion",
-        "Priority support and onboarding",
-      ],
-      cta: "Join Now & Start Earning",
-    },
+  eyebrow: "🚀 Limited Launch Offer",
+  title: "Turn Your Expertise Into a Profitable Online Business",
+  text: "Sell your services, connect with clients, improve your online visibility, and start earning from your knowledge with G9Expert.",
+
+  items: [
+    "Earn Through Chat & Call Consultations",
+    "Sell Services & Packages Online",
+    "Google & Local Search Visibility Support",
+    "AI Marketing Analysis & Growth Insights",
+    "No Free Consultation Requirement",
+    "Only 5% Platform Commission",
+    "Dedicated Expert Dashboard",
+    "Flexible Withdrawals Anytime",
+    "Free Verification Badge",
+    "Free G9 Expert Certificate",
+    "Session Scheduling Facility",
+    "24×7 Support Assistance"
+  ],
+
+  cta: "🚀 Join Now & Start Earning"
+},
     benefits: {
-      eyebrow: "Why G9Expert",
-      title: "We Don't Just Give You a Platform. We Give You a Business.",
-      items: [
-        "Sell Your Services",
-        "100% Control",
-        "Withdraw Anytime",
-        "Grow Your Brand",
-      ],
-    },
+  eyebrow: "Why G9Expert",
+  title: "More Than a Platform. A Complete Growth System For Experts.",
+  items: [
+    "Sell Your Services Online",
+    "Increase Google Visibility",
+    "AI-Powered Growth Tools",
+    "100% Profile Control"
+  ],
+},
     featureList: {
       eyebrow: "Feature Stack",
       title: "What Can You Do Here?",
@@ -620,26 +631,37 @@ export const translations = {
       ],
     },
     ctaBanner: {
-      eyebrow: "Limited Launch Offer",
-      title: "अब देर किस बात की?",
-      text: "आज ही जुड़ें और अपनी expertise से earning शुरू करें।",
-      items: [
-        "पहले 50 Experts के लिए 0% commission (30 दिन)",
-        "Free profile promotion",
-        "Priority support और onboarding",
-      ],
-      cta: "जॉइन करें और कमाई शुरू करें",
-    },
-    benefits: {
-      eyebrow: "Why G9Expert",
-      title: "हम आपको सिर्फ Platform नहीं, पूरा Business देते हैं",
-      items: [
-        "अपनी Service बेचें",
-        "100% Control",
-        "कभी भी Withdraw करें",
-        "अपना Brand बढ़ाएं",
-      ],
-    },
+  eyebrow: "🚀 Limited Launch Offer",
+  title: "अपने ज्ञान और अनुभव को Online Business में बदलें",
+  text: "G9Expert के साथ अपनी Services बेचें, Clients से जुड़ें, अपनी Online Visibility बढ़ाएं और अपनी Expertise से कमाई शुरू करें।",
+
+  items: [
+    " Chat & Call Consultation से कमाई",
+    " अपनी Services और Packages Online बेचें",
+    " Google & Local Search Visibility Support",
+    " AI Marketing Analysis & Growth Insights",
+    " No Free Consultation Requirement",
+    " केवल 5% Platform Commission",
+    " Dedicated Expert Dashboard",
+    " Flexible Withdrawals Anytime",
+    " Free Verification Badge",
+    " Free G9 Expert Certificate",
+    " Customer Session Scheduling Facility",
+    " 24×7 Support Assistance"
+  ],
+
+  cta: "🚀 अभी जुड़ें और कमाई शुरू करें"
+},
+   benefits: {
+  eyebrow: "Why G9Expert",
+  title: "हम आपको सिर्फ Platform नहीं, पूरा Growth System देते हैं",
+  items: [
+    "Services बेचकर कमाई करें",
+    "Google Visibility बढ़ाएं",
+    "AI-Powered Growth Tools",
+    "100% Profile Control"
+  ],
+},
     featureList: {
       eyebrow: "Feature Stack",
       title: "आप क्या-क्या कर सकते हैं?",
@@ -779,8 +801,8 @@ export const pricingTranslations = {
     eyebrow: "G9Expert Growth Plans",
     title: "Choose Your Expert Growth Plan",
     subtitle:
-      "Start selling your services online with G9Expert. Select the plan that matches your growth needs.",
-    recommendedRibbon: "Recommended",
+      "🎉 Grand Launch Offer! Join G9Expert today and save up to ₹5000. Limited to the first 100 experts only.",
+    recommendedRibbon: "🔥 Most Popular",
     featureEyebrow: "Plan Overview",
     featureTitle: "Plan Features",
     featureSubtitle:
@@ -794,7 +816,9 @@ export const pricingTranslations = {
     plans: [
       {
         name: "Basic Expert Plan",
+        originalPrice: "₹5999",
         price: "₹2999",
+        offerText: "🔥 Launch Offer - Save ₹3000 | Only For First 100 Experts",
         badge: "Starter",
         description:
           "Best for experts who want to create an online profile and start getting visibility.",
@@ -810,10 +834,12 @@ export const pricingTranslations = {
       },
       {
         name: "Premium Expert Plan",
+        originalPrice: "₹9999",
         price: "₹4999",
+        offerText: "🚀 Save ₹5000 Instantly | Only For First 100 Experts",
         badge: "Recommended",
         description:
-          "Best for experts who want more trust, more leads, and premium visibility.",
+          "Get Verified Badge, Premium Visibility, Priority Leads & Trust Stamp. Save ₹5000 today before the launch offer ends.",
         features: [
           "Expert Profile Listing",
           "Service Selling",
@@ -948,8 +974,8 @@ export const pricingTranslations = {
     eyebrow: "G9Expert Growth Plans",
     title: "अपना Expert Growth Plan चुनें",
     subtitle:
-      "G9Expert के साथ अपनी services online बेचें और अपनी growth के हिसाब से plan चुनें।",
-    recommendedRibbon: "Recommended",
+      "🎉 ग्रैंड लॉन्च ऑफर! आज ही G9Expert से जुड़ें और ₹5000 तक की बचत करें। ऑफर केवल पहले 100 Experts के लिए।",
+    recommendedRibbon: "🔥 सबसे ज्यादा पसंद किया गया",
     featureEyebrow: "Plan Overview",
     featureTitle: "Plan Features",
     featureSubtitle:
@@ -963,7 +989,9 @@ export const pricingTranslations = {
     plans: [
       {
         name: "Basic Expert Plan",
+        originalPrice: "₹5999",
         price: "₹2999",
+        offerText: "🔥 लॉन्च ऑफर - ₹3000 बचाएं | केवल पहले 100 Experts के लिए",
         badge: "Starter",
         description:
           "Best for experts who want to create an online profile and start getting visibility.",
@@ -979,10 +1007,12 @@ export const pricingTranslations = {
       },
       {
         name: "Premium Expert Plan",
+        originalPrice: "₹9999",
         price: "₹4999",
+        offerText: "🚀 ₹5000 तुरंत बचाएं | केवल पहले 100 Experts के लिए",
         badge: "Recommended",
         description:
-          "Best for experts who want more trust, more leads, and premium visibility.",
+          "Verified Badge, Premium Visibility, Priority Leads और Trust Stamp पाएं। लॉन्च ऑफर खत्म होने से पहले ₹5000 की बचत करें।",
         features: [
           "Expert Profile Listing",
           "Service Selling",
@@ -1003,91 +1033,91 @@ export const pricingTranslations = {
         icon: "👤",
         title: "Expert Profile Listing",
         description:
-          "Apna professional expert profile बनाएं jisme naam, category, experience, service details, price aur contact options clearly दिखें.",
+          "Apna professional expert profile बनाएं jisme naam, category, experience, service details, price aur contact options clearly दिखें।",
       },
       {
         icon: "🛍️",
         title: "Service Selling",
         description:
-          "Chat, call, packages, profile review, legal guidance, career guidance, astrology consultation aur aur bhi services sell करें.",
+          "Chat, call, packages, profile review, legal guidance, career guidance, astrology consultation aur aur bhi services sell करें।",
       },
       {
         icon: "📥",
         title: "Basic Leads Access",
         description:
-          "Category, availability, profile quality aur demand ke basis par basic leads aur client enquiries तक access पाएं.",
+          "Category, availability, profile quality aur demand ke basis par basic leads aur client enquiries तक access पाएं।",
       },
       {
         icon: "🚀",
         title: "Premium Leads",
         description:
-          "Premium plan experts ko better lead visibility aur serious clients se connect hone ke better chances मिलते हैं.",
+          "Premium plan experts ko better lead visibility aur serious clients se connect hone ke better chances मिलते हैं।",
       },
       {
         icon: "📈",
         title: "Higher Visibility",
         description:
-          "Relevant category sections me better placement aur extra exposure paakar users ko apni profile jaldi discover karne दें.",
+          "Relevant category sections me better placement aur extra exposure paakar users ko apni profile jaldi discover karne दें।",
       },
       {
         icon: "🧭",
         title: "Smart Lead Management",
         description:
-          "Apni enquiries, client interest aur consultation requests ko ek jagah se view, track aur manage करें.",
+          "Apni enquiries, client interest aur consultation requests ko ek jagah se view, track aur manage करें।",
       },
       {
         icon: "🪪",
         title: "Profile Ownership",
         description:
-          "Aapka expert profile aapki digital business identity ki tarah kaam karta hai jahan skills, services, pricing aur credibility showcase hoti hai.",
+          "Aapka expert profile aapki digital business identity ki tarah kaam karta hai jahan skills, services, pricing aur credibility showcase hoti hai।",
       },
       {
         icon: "🛡️",
         title: "Trust Stamp",
         description:
-          "Trust indicator ke liye eligible बनें jo users ko दिखाता है ki aapki profile serious aur reliable hai.",
+          "Trust indicator ke liye eligible बनें jo users ko दिखाता है ki aapki profile serious aur reliable hai।",
       },
       {
         icon: "✅",
         title: "Verified Seal",
         description:
-          "Verification ke baad verified profile badge show करें aur users ke saamne credibility improve करें.",
+          "Verification ke baad verified profile badge show करें aur users ke saamne credibility improve करें।",
       },
       {
         icon: "🤝",
         title: "Premium Customer Support",
         description:
-          "Guided onboarding, priority support aur profile setup ya plan help ke liye faster assistance पाएं.",
+          "Guided onboarding, priority support aur profile setup ya plan help ke liye faster assistance पाएं।",
       },
       {
         icon: "⚡",
         title: "Priority Onboarding",
         description:
-          "Faster profile activation, guided setup aur service creation support ka benefit लें.",
+          "Faster profile activation, guided setup aur service creation support ka benefit लें।",
       },
       {
         icon: "📚",
         title: "Online Service Catalogue",
         description:
-          "Ek clean profile me multiple services, packages, pricing, deliverables aur consultation options showcase करें.",
+          "Ek clean profile me multiple services, packages, pricing, deliverables aur consultation options showcase करें।",
       },
       {
         icon: "💳",
         title: "Payment & Wallet Support",
         description:
-          "Platform wallet/payment flow ke through consultation earnings receive करें aur platform policy ke hisaab se withdrawal request करें.",
+          "Platform wallet/payment flow ke through consultation earnings receive करें aur platform policy ke hisaab se withdrawal request करें।",
       },
       {
         icon: "⭐",
         title: "Review & Rating Support",
         description:
-          "User reviews aur ratings ke through trust build करें jo profile performance improve karne me help करते हैं.",
+          "User reviews aur ratings ke through trust build करें jo profile performance improve karne me help करते हैं।",
       },
       {
         icon: "📣",
         title: "Promotion Add-ons",
         description:
-          "Eligible experts ko plan aur current offer ke basis par profile promotion, category visibility ya banner-style placement मिल सकता है.",
+          "Eligible experts ko plan aur current offer ke basis par profile promotion, category visibility ya banner-style placement मिल सकता है।",
       },
     ],
     rows: [
@@ -1111,7 +1141,7 @@ export const pricingTranslations = {
     leadsNote:
       "Leads depend on category demand, profile quality, user interest, availability, and current platform offer.",
     disclaimer:
-      "Plan features category, location, current offer, verification status aur platform policy ke according vary ho sakte hain. Leads category demand, profile quality, user interest, expert availability aur current platform offer par depend karti hain.",
+      "Plan features category, location, current offer, verification status aur platform policy ke according vary ho sakte hain. Leads category demand, profile quality, user interest, expert availability aur current platform offer par depend karti hain।",
   },
 };
 

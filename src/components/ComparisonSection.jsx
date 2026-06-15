@@ -8,6 +8,15 @@ export default function ComparisonSection() {
   const { lang } = useLanguage();
   const pricing = pricingTranslations[lang] ?? pricingTranslations.en;
 
+  // Helper function to calculate savings
+  const calculateSavings = (originalPrice, price) => {
+    if (!originalPrice || !price) return null;
+    const original = parseInt(originalPrice.replace('₹', '').replace(',', ''));
+    const current = parseInt(price.replace('₹', '').replace(',', ''));
+    const savings = original - current;
+    return `Save ₹${savings.toLocaleString()}`;
+  };
+
   return (
     <section className="section section-light" id="pricing">
       <div className="container">
@@ -34,7 +43,36 @@ export default function ComparisonSection() {
 
               <div className="pricing-copy">
                 <h3 {...getHeadingAnimation(index, 35)}>{plan.name}</h3>
-                <strong className="plan-price">{plan.price}</strong>
+                
+                {/* Updated price section with larger, impressive pricing */}
+                <div className="plan-price-wrap">
+                  {plan.originalPrice && (
+                    <div className="plan-original-price">
+                      {plan.originalPrice}
+                    </div>
+                  )}
+                  
+                  <div className="plan-price-wrapper">
+                    <span className="plan-price-currency">₹</span>
+                    <strong className="plan-price">
+                      {plan.price.replace('₹', '')}
+                    </strong>
+                  </div>
+                  
+                  <div className="plan-price-divider"></div>
+                  
+                  {plan.offerText && (
+                    <>
+                      <div className="plan-offer-text">
+                        {plan.offerText}
+                      </div>
+                      <div className="plan-savings-badge">
+                        {calculateSavings(plan.originalPrice, plan.price)}
+                      </div>
+                    </>
+                  )}
+                </div>
+                
                 <p>{plan.description}</p>
               </div>
 

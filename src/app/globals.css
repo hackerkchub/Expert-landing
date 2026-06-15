@@ -1519,3 +1519,246 @@ color: #000000;
     padding: 0 12px;
   }
 }
+
+
+
+
+/* Premium Price Section Styles - Larger & More Impressive */
+.plan-price-wrap {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.plan-original-price {
+  text-decoration: line-through;
+  color: hsl(109, 100%, 31%);
+  font-size: 2.8rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plan-original-price::before {
+  content: "💸";
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.plan-price-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.plan-price-currency {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.plan-price {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.plan-price-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+  margin: 0.5rem auto;
+}
+
+.plan-offer-text {
+  font-size: 1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.plan-offer-text::before {
+  content: "⚡";
+  font-size: 1.2rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    transform: scale(1);
+  }
+}
+
+/* Savings Badge */
+.plan-savings-badge {
+  position: absolute;
+  top: -20px;
+  right: -15px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.plan-savings-badge::before {
+  content: "🎯";
+  font-size: 0.9rem;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+/* For featured card */
+.pricing-card-featured {
+  position: relative;
+  overflow: hidden;
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card-featured::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #f59e0b, #ea580c, #f59e0b);
+}
+
+.pricing-card-featured .plan-price {
+  background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+.pricing-card-featured .plan-price-currency {
+  color: #ea580c;
+  font-size: 2.2rem;
+}
+
+.pricing-card-featured .plan-offer-text {
+  background: linear-gradient(135deg, #ea580c 0%, #dc2626 100%);
+  animation: pulse 1.5s infinite;
+  font-size: 1.1rem;
+}
+
+.pricing-card-featured .plan-savings-badge {
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+  font-size: 0.9rem;
+}
+
+/* Hover effects */
+.pricing-card {
+  transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card:hover .plan-price-wrap {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover .plan-offer-text {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .plan-price {
+    font-size: 3.5rem;
+  }
+  
+  .pricing-card-featured .plan-price {
+    font-size: 4rem;
+  }
+  
+  .pricing-card-featured .plan-price-currency {
+    font-size: 1.8rem;
+  }
+  
+  .plan-original-price {
+    font-size: 1.2rem;
+  }
+  
+  .plan-offer-text {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .plan-savings-badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.75rem;
+    top: -15px;
+    right: -10px;
+  }
+  
+  .pricing-card-featured {
+    transform: scale(1);
+  }
+  
+  .pricing-card-featured .plan-offer-text {
+    font-size: 0.9rem;
+  }
+}
+
+.error-message {
+  color: #ef4444;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #22c55e;
+  margin-top: 10px;
+  font-size: 14px;
+}

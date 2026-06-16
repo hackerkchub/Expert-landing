@@ -73,7 +73,7 @@ export default function RegistrationSection() {
       setSuccessMessage("");
 
       const response = await axios.post(
-        `http://localhost:5000/api/expert-detail/expert-registration`,
+        `https://softmaxs.com/api/expert-detail/expert-registration`,
         form,
         {
           headers: {

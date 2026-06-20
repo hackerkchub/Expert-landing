@@ -816,9 +816,9 @@ export const pricingTranslations = {
     plans: [
       {
         name: "Basic Expert Plan",
-        originalPrice: "₹5999",
+        originalPrice: "₹9999",
         price: "₹2999",
-        offerText: "🔥 Launch Offer - Save ₹3000 | Only For First 100 Experts",
+        offerText: "🔥 Launch Offer - Save ₹7000 | Only For First 100 Experts",
         badge: "Starter",
         description:
           "Best for experts who want to create an online profile and start getting visibility.",
@@ -834,9 +834,9 @@ export const pricingTranslations = {
       },
       {
         name: "Premium Expert Plan",
-        originalPrice: "₹9999",
+        originalPrice: "₹14999",
         price: "₹4999",
-        offerText: "🚀 Save ₹5000 Instantly | Only For First 100 Experts",
+        offerText: "🚀 Save ₹10,000 Instantly | Only For First 100 Experts",
         badge: "Recommended",
         description:
           "Get Verified Badge, Premium Visibility, Priority Leads & Trust Stamp. Save ₹5000 today before the launch offer ends.",
@@ -989,9 +989,9 @@ export const pricingTranslations = {
     plans: [
       {
         name: "Basic Expert Plan",
-        originalPrice: "₹5999",
+        originalPrice: "₹9999",
         price: "₹2999",
-        offerText: "🔥 लॉन्च ऑफर - ₹3000 बचाएं | केवल पहले 100 Experts के लिए",
+        offerText: "🔥 लॉन्च ऑफर - ₹7000 बचाएं | केवल पहले 100 Experts के लिए",
         badge: "Starter",
         description:
           "Best for experts who want to create an online profile and start getting visibility.",
@@ -1007,9 +1007,9 @@ export const pricingTranslations = {
       },
       {
         name: "Premium Expert Plan",
-        originalPrice: "₹9999",
+        originalPrice: "₹14999",
         price: "₹4999",
-        offerText: "🚀 ₹5000 तुरंत बचाएं | केवल पहले 100 Experts के लिए",
+        offerText: "🚀 ₹10,000 तुरंत बचाएं | केवल पहले 100 Experts के लिए",
         badge: "Recommended",
         description:
           "Verified Badge, Premium Visibility, Priority Leads और Trust Stamp पाएं। लॉन्च ऑफर खत्म होने से पहले ₹5000 की बचत करें।",
